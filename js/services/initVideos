@@ -1,0 +1,4 @@
+myApp.factory('initVideos', function() {
+
+    var videos = requir
+})

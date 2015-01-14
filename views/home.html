@@ -1,0 +1,14 @@
+<main>
+        <section class="video-container">
+            <article class="video" data-ng-repeat="video in MVideos" id="{{$index}}">
+                <img ng-src="{{video.thumb}}" class="video-thumb" />
+                <span class="video-title"><p>{{video.name}}</p></span>
+                <div class="btn-group">
+                    <a href="#/player/{{$index}}" class="btn btn-sm btn-success">Play</a>
+                    <a href="#/options/{{$index}}" class="btn btn-sm btn-danger">Edit</a>
+                </div>
+
+
+            </article >
+        </section>
+</main>

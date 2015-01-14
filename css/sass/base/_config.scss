@@ -1,0 +1,51 @@
+@import "colors";
+
+%border-rad {
+    border-radius: 10px;
+}
+
+// Functions
+
+@function color-pair($c) {
+    @if $c == $bg-base {
+        @return $bg-dark;
+    } @else if $c == $turq-base {
+        @return $turq-dark;
+    } @else if $c == $green-base {
+        @return $green-dark;
+    } @else if $c == $blue-base {
+        @return $blue-dark;
+    } @else if $c == $purple-base {
+        @return $purple-dark;
+    } @else if $c == $gold-base {
+        @return $gold-dark;
+    } @else if $c == $orange-base {
+        @return $orange-dark;
+    } @else if $c == $red-base {
+        @return $red-dark;
+    } @else if $c == $white-base {
+        @return $white-dark;
+    } @else if $c == $grey-base {
+        @return $grey-dark;
+    } @else if $c == $bg-dark {
+        @return $bg-base;
+    } @else if $c == $turq-dark {
+        @return $turq-base;
+    } @else if $c == $green-dark {
+        @return $green-base;
+    } @else if $c == $blue-dark {
+        @return $blue-base;
+    } @else if $c == $purple-dark {
+        @return $purple-base;
+    } @else if $c == $gold-dark {
+        @return $gold-base;
+    } @else if $c == $orange-dark {
+        @return $orange-base;
+    } @else if $c == $red-dark {
+        @return $red-base;
+    } @else if $c == $white-dark {
+        @return $white-base;
+    } @else if $c == $grey-dark {
+        @return $grey-base;
+    }
+}

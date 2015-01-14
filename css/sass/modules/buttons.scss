@@ -1,0 +1,46 @@
+$btn-font-size: 2.0rem;
+
+@mixin btn($base-color) {
+    border-bottom: 4px solid color-pair($base-color);
+    background-color: $base-color;
+    font-size: $btn-font-size;
+
+}
+
+
+.btn-turq {
+    @include btn($turq-base);
+}
+
+.btn-green {
+    @include btn($green-base);
+}
+
+.btn-blue {
+    @include btn($blue-base);
+}
+
+.btn-purple {
+    @include btn($purple-base);
+}
+
+.btn-orange {
+    @include btn($orange-base)
+}
+
+.btn-gold {
+    @include btn($gold-base);
+}
+
+.btn-red {
+    @include btn($red-base);
+}
+
+.btn-white {
+    @include btn($white-base);
+}
+
+.btn-grey {
+    @include btn($grey-base);
+}
+
