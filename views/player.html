@@ -1,4 +1,6 @@
-<video class="video-js" width="{{video.width}}" height="{{video.height}}"
-       controls preload="auto" poster="{{video.thumb}}" data-setup="{}">
-    <source ng-src="{{video.relative}}" type="video/mp4">
-</video>
+<div class="container">
+    <video class="video-js vjs-default-skin" width="{{player.width}}" height="{{player.height}}"
+           controls autoplay preload="auto" poster="{{player.thumb}}">
+        <source ng-src="{{player.relative}}" type="video/mp4">
+    </video>
+</div>

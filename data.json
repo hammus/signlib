@@ -9,8 +9,23 @@
 		"width": 632,
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\A-thumb.png",
-		"categories": ["Letters","Grammar"],
-		"tags": ["index", "thumb"]
+		"categories": [
+			{
+				"text": "Letters"
+			},
+			{
+				"text": "Grammar"
+			}
+		],
+		"tags": [
+			{
+				"text": "index"
+			},
+			{
+				"text": "thumb"
+			}
+		],
+		"$$hashKey": "object:5"
 	},
 	{
 		"name": "Adam",
@@ -23,7 +38,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Adam-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:6"
 	},
 	{
 		"name": "Aeroplane",
@@ -36,7 +52,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Aeroplane-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:7"
 	},
 	{
 		"name": "After",
@@ -49,7 +66,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\After-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:8"
 	},
 	{
 		"name": "And",
@@ -62,7 +80,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\And-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:9"
 	},
 	{
 		"name": "Apple",
@@ -75,7 +94,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Apple-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:10"
 	},
 	{
 		"name": "At",
@@ -88,7 +108,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\At-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:11"
 	},
 	{
 		"name": "August",
@@ -101,7 +122,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\August-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:12"
 	},
 	{
 		"name": "Aunty D",
@@ -114,7 +136,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Aunty D-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:13"
 	},
 	{
 		"name": "B",
@@ -127,7 +150,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\B-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:14"
 	},
 	{
 		"name": "Baby",
@@ -140,7 +164,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Baby-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:15"
 	},
 	{
 		"name": "Bag",
@@ -153,7 +178,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Bag-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:16"
 	},
 	{
 		"name": "Ball",
@@ -166,7 +192,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Ball-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:17"
 	},
 	{
 		"name": "Banana",
@@ -179,7 +206,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Banana-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:18"
 	},
 	{
 		"name": "Barbeque",
@@ -192,7 +220,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Barbeque-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:19"
 	},
 	{
 		"name": "Barbie",
@@ -205,7 +234,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Barbie-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:20"
 	},
 	{
 		"name": "Batemans Bay",
@@ -218,7 +248,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Batemans Bay-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:21"
 	},
 	{
 		"name": "Bath",
@@ -231,7 +262,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Bath-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:22"
 	},
 	{
 		"name": "Beach",
@@ -244,7 +276,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Beach-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:23"
 	},
 	{
 		"name": "Bear",
@@ -257,7 +290,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Bear-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:24"
 	},
 	{
 		"name": "Bed",
@@ -270,7 +304,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Bed-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:25"
 	},
 	{
 		"name": "Before",
@@ -283,7 +318,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Before-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:26"
 	},
 	{
 		"name": "Bell",
@@ -296,7 +332,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Bell-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:27"
 	},
 	{
 		"name": "Betty",
@@ -309,7 +346,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Betty-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:28"
 	},
 	{
 		"name": "Blue Mountains",
@@ -322,7 +360,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Blue Mountains-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:29"
 	},
 	{
 		"name": "Camphor (signs Different)",
@@ -335,7 +374,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Camphor (signs Different)-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:30"
 	},
 	{
 		"name": "Caravan",
@@ -348,7 +388,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Caravan-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:31"
 	},
 	{
 		"name": "Carol",
@@ -361,7 +402,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Carol-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:32"
 	},
 	{
 		"name": "Carrot",
@@ -374,7 +416,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Carrot-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:33"
 	},
 	{
 		"name": "Cat",
@@ -387,7 +430,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Cat-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:34"
 	},
 	{
 		"name": "Cereal",
@@ -400,7 +444,8 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Cereal-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:35"
 	},
 	{
 		"name": "Chair",
@@ -413,6 +458,7 @@
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\Chair-thumb.png",
 		"categories": [],
-		"tags": []
+		"tags": [],
+		"$$hashKey": "object:36"
 	}
 ]

@@ -4,9 +4,9 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
 
-            <div class="panel panel-primary" data-ng-repeat="video in MVideos" data-ng-if="$index == model.id">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ video.name }}</h3>
+                    <h3 class="panel-title">{{options.name}}</h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-horizontal">
@@ -15,36 +15,32 @@
 
                             <tr>
                                 <td class="key">Word</td>
-                                <td class="value"><input type="text"
-                                                         name="video_{{ $index }}"
-                                                         id="video_{{ $index }}"
-                                                         placeholder="{{ video.name }}"
-                                                         disabled /></td>
+                                <td class="value"><input ng-model="options.name" type="text"
+                                                         /></td>
                             </tr>
                             <tr>
                                 <td class="key">Categories</td>
                                 <td class="value" >
-
                                     <!--<span data-ng-repeat="cat in video.categories" class="label label-success">{{cat}} </span>-->
-                                    <tags-input ng-model="video.categories"></tags-input>
+                                    <tags-input ng-model="options.categories"></tags-input>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="key">Tags</td>
                                 <td class="value" >
-                                    <tags-input ng-model="video.tags"></tags-input>
+                                    <tags-input ng-model="options.tags"></tags-input>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="key">Location</td>
-                                <td class="value">{{ video.path }}</td>
+                                <td class="value"><input type="text" ng-model="options.path"/></td>
                             </tr>
                             </tbody>
                         </table>
                     </form>
                 </div>
 
-        </div data-ng-repeat-end>
+        </div>
         </div>
         <div class="col-md-2"></div>
     </article>

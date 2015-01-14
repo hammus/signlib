@@ -185,24 +185,30 @@ body {
   width: 100%;
 }
 
-/* line 60, sass/screen.scss */
+/* line 58, sass/screen.scss */
+video {
+  display: block;
+  margin: auto;
+}
+
+/* line 63, sass/screen.scss */
 .nav-container {
   height: 80%;
   margin-bottom: 1%;
 }
 
-/* line 65, sass/screen.scss */
+/* line 68, sass/screen.scss */
 .flex {
   width: 100%;
   height: 50px;
 }
 
-/* line 71, sass/screen.scss */
+/* line 74, sass/screen.scss */
 .text-center {
   height: 100%;
 }
 
-/* line 75, sass/screen.scss */
+/* line 78, sass/screen.scss */
 .flex-item-child {
   display: table-cell;
   margin: auto;
@@ -210,13 +216,13 @@ body {
   text-align: center;
 }
 
-/* line 84, sass/screen.scss */
+/* line 87, sass/screen.scss */
 .flex-item {
   width: 25%;
   height: 100%;
 }
 
-/* line 90, sass/screen.scss */
+/* line 93, sass/screen.scss */
 .video-container {
   display: flex;
   flex-flow: row wrap;
@@ -224,12 +230,12 @@ body {
   width: 80%;
   margin: auto;
 }
-/* line 98, sass/screen.scss */
+/* line 101, sass/screen.scss */
 .video-container .video {
   flex: 1 1 auto;
 }
 
-/* line 103, sass/screen.scss */
+/* line 106, sass/screen.scss */
 video.video-player {
   cursor: pointer;
   display: none;

@@ -1,3 +1,5 @@
+var database    = require('database');
+
 
 myApp.controller("homeController", function($scope) {
     $scope.headerSrc = 'views/header.html'
@@ -24,13 +26,18 @@ myApp.controller("homeController", function($scope) {
             console.error("Data File Didn't Load");
         }
 
+        $scope.$watch('MVideos', function(newVal, oldVal) {
+            database.saveData(newVal);
+        }, true);
 
 });
 
 myApp.controller("optionsController", function($scope, $routeParams){
-    $scope.model = {
-        id: $routeParams.id
-    }
+    $scope.options = $scope.MVideos[$routeParams.id];
 
-    $scope.currentVideo = $scope.MVideos[id];
+
+});
+
+myApp.controller("playerController", function($scope, $routeParams){
+   $scope.player = $scope.MVideos[$routeParams.id];
 });
