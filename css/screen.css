@@ -152,63 +152,29 @@ body {
 }
 
 /* line 29, sass/screen.scss */
-.main-nav {
-  font-family: Lato;
-  margin-bottom: 20px;
-}
-/* line 32, sass/screen.scss */
-.main-nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  list-style: none;
-}
-/* line 40, sass/screen.scss */
-.main-nav ul li {
-  flex: 1 1 auto;
-}
-/* line 44, sass/screen.scss */
-.main-nav a {
-  padding: 1.25rem 0.5rem;
-  font-size: 3.0rem;
-  width: 100%;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-}
-/* line 52, sass/screen.scss */
-.main-nav a div {
-  width: 100%;
-}
-
-/* line 58, sass/screen.scss */
 video {
   display: block;
   margin: auto;
 }
 
-/* line 63, sass/screen.scss */
+/* line 34, sass/screen.scss */
 .nav-container {
   height: 80%;
   margin-bottom: 1%;
 }
 
-/* line 68, sass/screen.scss */
+/* line 39, sass/screen.scss */
 .flex {
   width: 100%;
   height: 50px;
 }
 
-/* line 74, sass/screen.scss */
+/* line 45, sass/screen.scss */
 .text-center {
   height: 100%;
 }
 
-/* line 78, sass/screen.scss */
+/* line 49, sass/screen.scss */
 .flex-item-child {
   display: table-cell;
   margin: auto;
@@ -216,13 +182,13 @@ video {
   text-align: center;
 }
 
-/* line 87, sass/screen.scss */
+/* line 58, sass/screen.scss */
 .flex-item {
   width: 25%;
   height: 100%;
 }
 
-/* line 93, sass/screen.scss */
+/* line 64, sass/screen.scss */
 .video-container {
   display: flex;
   flex-flow: row wrap;
@@ -230,13 +196,7 @@ video {
   width: 80%;
   margin: auto;
 }
-/* line 101, sass/screen.scss */
+/* line 72, sass/screen.scss */
 .video-container .video {
   flex: 1 1 auto;
-}
-
-/* line 106, sass/screen.scss */
-video.video-player {
-  cursor: pointer;
-  display: none;
 }

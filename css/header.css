@@ -1,0 +1,39 @@
+/* line 1, sass/header.scss */
+.main-nav {
+  font-family: 'Lato';
+  text-transform: uppercase;
+  height: 50px;
+  margin-bottom: 20px;
+}
+/* line 8, sass/header.scss */
+.main-nav ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+}
+/* line 17, sass/header.scss */
+.main-nav ul li {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+/* line 25, sass/header.scss */
+.main-nav a {
+  height: 100%;
+  font-size: 1.3rem;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+/* line 33, sass/header.scss */
+.main-nav a div {
+  text-align: center;
+  width: 100%;
+}

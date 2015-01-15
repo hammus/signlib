@@ -26,35 +26,6 @@ body {
 }
 
 
-.main-nav {
-    font-family: Lato;
-    margin-bottom: 20px;
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-content: center;
-        list-style: none;
-        li {
-            flex: 1 1 auto;
-        }
-    }
-    a {
-        padding: 1.25rem 0.5rem;
-        font-size: 3.0rem;
-        width: 100%;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: #ffffff;
-        div {
-            width: 100%;
-        }
-    }
-}
-
 video {
     display: block;
     margin:auto;
@@ -103,8 +74,3 @@ video {
     }
 }
 
-video.video-player
-{
-    cursor: pointer;
-    display: none;
-}

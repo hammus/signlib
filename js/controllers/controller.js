@@ -2,7 +2,10 @@ var database    = require('database');
 
 
 myApp.controller("homeController", function($scope) {
-    $scope.headerSrc = 'views/header.html'
+
+    $scope.headerSrc = 'views/header.html';
+    $scope.viewStyle = 'css/header.css';
+
     $scope.init = function()
     {
         try {

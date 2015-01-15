@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" ng-controller="homeController">
 <head>
     <title>India Spode's Signing Library</title>
 
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css"/>
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.css" />
-    <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/screen.css" media="screen, projection"  type="text/css"/>
     <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css"/>
-
+    <link rel="stylesheet" href="{{viewStyle}}"/>
     <!-- Main Style -->
 
     <!-- END STYLES -->
@@ -32,7 +32,7 @@
 
 
 </head>
-<body ng-controller="homeController">
+<body>
 <ng-include src="headerSrc"></ng-include>
 <div id="content">
     <ng-view></ng-view>
