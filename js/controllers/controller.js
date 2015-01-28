@@ -44,3 +44,7 @@ myApp.controller("optionsController", function($scope, $routeParams){
 myApp.controller("playerController", function($scope, $routeParams){
    $scope.player = $scope.MVideos[$routeParams.id];
 });
+
+myApp.controller("darsh", function($scope) {
+   $scope.style = require()
+});
