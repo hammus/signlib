@@ -189,6 +189,11 @@ video {
 }
 
 /* line 64, sass/screen.scss */
+.btn-group {
+  width: 80%;
+}
+
+/* line 68, sass/screen.scss */
 .video-container {
   display: flex;
   flex-flow: row wrap;
@@ -196,7 +201,7 @@ video {
   width: 80%;
   margin: auto;
 }
-/* line 72, sass/screen.scss */
+/* line 76, sass/screen.scss */
 .video-container .video {
   flex: 1 1 auto;
 }
