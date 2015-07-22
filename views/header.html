@@ -1,19 +1,24 @@
 <header>
-    <nav role="navigation" class="navbar navbar-default" id="main-nav">
+    <nav role="navigation" class="navbar navbar-fixed-top" id="main-nav">
         <div class="container-fluid">
             <ul id="main-nav-list" class="nav navbar-nav">
-                <li class="btn-blue">
-                    <a href="#" >
+                <li>
+                    <a id="a-home" href="#" class="btn-blue">
                         <div>Home</div>
                     </a>
                 </li>
-                <li class="btn-green">
-                    <a href="categories/">
+                <li >
+                    <a class="btn-green" id="a-categories" href="categories/">
                         <div>Categories</div>
                     </a>
                 </li>
-                <li class="btn-red">
-                    <a href="#">
+                <li >
+                    <a class="btn-gold" id="a-compic" href="compic/">
+                        <div>Compics</div>
+                    </a>
+                </li>
+                <li >
+                    <a class="btn-red" ng-click="quit();" id="a-exit" href="#">
                         <div>Exit</div>
                     </a>
                 </li>

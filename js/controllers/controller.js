@@ -6,6 +6,13 @@ myApp.controller("homeController", function($scope) {
     $scope.headerSrc = 'views/header.html';
     $scope.viewStyle = 'css/header.css';
 
+    $scope.quit = function()
+    {
+        var gui = require("nw.gui");
+        gui.App.quit();
+
+    };
+
     $scope.init = function()
     {
         try {
@@ -14,7 +21,7 @@ myApp.controller("homeController", function($scope) {
         {
             console.error(err);
         }
-    }
+    };
 
 
         try {
@@ -45,6 +52,3 @@ myApp.controller("playerController", function($scope, $routeParams){
    $scope.player = $scope.MVideos[$routeParams.id];
 });
 
-myApp.controller("darsh", function($scope) {
-   $scope.style = require()
-});

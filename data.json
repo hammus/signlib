@@ -9,14 +9,7 @@
 		"width": 632,
 		"height": 480,
 		"thumb": "F:\\Dropbox\\NetNOW\\signlibrary-struct\\videos\\thumbs\\A-thumb.png",
-		"categories": [
-			{
-				"text": "Letters"
-			},
-			{
-				"text": "Grammar"
-			}
-		],
+		"categories": [],
 		"tags": [
 			{
 				"text": "point-hand"

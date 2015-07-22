@@ -74,9 +74,10 @@ main {
 */
 /* line 11, sass/modules/buttons.scss */
 .btn-turq {
-  border-bottom: 4px solid #16a085;
-  background-color: #1abc9c;
-  font-size: 2rem;
+    border-bottom: 4px solid #16a085;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 2rem;
 }
 
 /* line 15, sass/modules/buttons.scss */
@@ -86,6 +87,12 @@ main {
   font-size: 2rem;
 }
 
+a:hover.btn-green, a:active.btn-green, a:focus.btn-green {
+    border-bottom: 4px solid #2ecc71 !important;
+    background-color: #27ae60 !important;
+    font-size: 2rem;
+}
+
 /* line 19, sass/modules/buttons.scss */
 .btn-blue {
   border-bottom: 4px solid #2980b9;
@@ -93,11 +100,29 @@ main {
   font-size: 2rem;
 }
 
+a:hover.btn-blue, a:active.btn-blue, a:focus.btn-blue {
+    border-bottom: 4px solid;
+    border-bottom-color: #3498db !important;
+    background-color: #2980b9 !important;
+    font-size: 2rem;
+}
+
+a {
+    transition: font-size, 0.1s, background-color 0.1s, border-bottom-color 0.1s;
+    font-size: 2rem;
+}
+
 /* line 23, sass/modules/buttons.scss */
 .btn-purple {
   border-bottom: 4px solid #8e44ad;
   background-color: #9b59b6;
   font-size: 2rem;
+}
+
+a:hover.btn-purple, a:active.btn-purple, a:focus.btn-purple {
+    border-bottom: 4px solid #9b59b6 !important;
+    background-color: #8e44ad !important;
+    font-size: 2rem;
 }
 
 /* line 27, sass/modules/buttons.scss */
@@ -114,6 +139,12 @@ main {
   font-size: 2rem;
 }
 
+a:hover.btn-gold, a:active.btn-gold, a:focus.btn-gold {
+    border-bottom: 4px solid #f1c40f !important;
+    background-color: #f39c12 !important;
+    font-size: 2rem;
+}
+
 /* line 35, sass/modules/buttons.scss */
 .btn-red {
   border-bottom: 4px solid #c0392b;
@@ -121,6 +152,12 @@ main {
   font-size: 2rem;
 }
 
+
+a:hover.btn-red, a:active.btn-red, a:focus.btn-red {
+    border-bottom: 4px solid #d35400 !important;
+    background-color: #c0392b !important;
+    font-size: 2rem;
+}
 /* line 39, sass/modules/buttons.scss */
 .btn-white {
   border-bottom: 4px solid #bdc3c7;
@@ -200,6 +237,7 @@ video {
   justify-content: space-around;
   width: 80%;
   margin: auto;
+    margin-top: 100px;
 }
 /* line 76, sass/screen.scss */
 .video-container .video {
