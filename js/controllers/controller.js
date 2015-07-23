@@ -1,8 +1,9 @@
-var database    = require('database');
 
 
-myApp.controller("homeController", function($scope) {
 
+angular.module('myApp').controller("homeController", function($scope) {
+
+    var database = require('database');
     $scope.headerSrc = 'views/header.html';
     $scope.viewStyle = 'css/header.css';
 
@@ -40,15 +41,15 @@ myApp.controller("homeController", function($scope) {
             database.saveData(newVal);
         }, true);
 
-});
-
-myApp.controller("optionsController", function($scope, $routeParams){
+}).controller("optionsController", function($scope, $routeParams){
     $scope.options = $scope.MVideos[$routeParams.id];
 
 
-});
-
-myApp.controller("playerController", function($scope, $routeParams){
+}).controller("playerController", function($scope, $routeParams){
    $scope.player = $scope.MVideos[$routeParams.id];
-});
+})
+
+.controller('compicsController', function($scope, $routeParams) {
+
+    });
 

@@ -1,10 +1,15 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngTagsInput'])
+
+angular.module('myApp', ['ngRoute', 'ngTagsInput'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
             templateUrl: 'views/home.html',
             controller: 'homeController'
-        })
+        }).when('/compics', {
+                templateUrl: 'views/compics.html',
+                controller: 'compicsController'
+            })
+
             .when('/options/:id', {
             templateUrl: 'views/options.html',
             controller: 'optionsController'
