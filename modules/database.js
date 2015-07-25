@@ -7,18 +7,24 @@
 
 
 module.exports = function(){
-    var jf = require('jsonfile');
-    return {
-            saveData: function(configFile, data)
-            {
-                jf.writeFileSync(configFile, data)
-            },
+    var jf = require('jsonfile'),
+        fs = require('fs'),
+        dataFile = "data.json";
 
-            readDataFile: function(dataFile){
-                if (fs.existsSync(CONFIG.dataFile)) {
+    function saveData(file, data)
+    {
+        jf.writeFileSync(file, data);
+    }
+
+    return {
+
+            saveData: function(data){
+                saveData(dataFile, data);
+            },
+            getDataFile: function(){
+                if (fs.existsSync(this.dataFile)) {
                     //data file exists load it
-                    var data = jf.readFileSync(CONFIG.dataFile, {throws: true});
-                    return data;
+                    return jf.readFileSync(this.dataFile, {throws: true});
 
                 } else {
 
