@@ -1,7 +1,7 @@
 /**
  * Created by Liam on 22/07/2015.
  */
-var CONFIG = require('config');
+var CONFIG = require('config.js');
 var path = require('path');
 var ffmpeg = require('fluent-ffmpeg');
 var filesys = require('filesystem');

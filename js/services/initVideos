@@ -1,4 +1,0 @@
-myApp.factory('initVideos', function() {
-
-
-})

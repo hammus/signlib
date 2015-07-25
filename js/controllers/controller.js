@@ -3,7 +3,7 @@
 
 angular.module('myApp').controller("homeController", function($scope) {
 
-    var database = require('database');
+    var database = require('database.js');
     $scope.headerSrc = 'views/header.html';
     $scope.viewStyle = 'css/header.css';
 
