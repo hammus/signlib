@@ -1,35 +1,20 @@
-module.exports = function (vidCol) {
-    var model = require("model"),
-        ffmpeg = require("fluent-ffmpeg"),
-        db = require('modules/Database.js'),
+module.exports = function (vidCol, db) {
+    var ffmpeg = require("fluent-ffmpeg"),
         path = require('path'),
-        currentVideo = 0,
-        metaArray = [];
-    var thumbFolder = path.relative(process.cwd(), path.normalize(vidCol.first().folder + "\\thumbs\\"));
+        _vidCol = vidCol,
+        _thumbFolder = path.relative(process.cwd(), path.normalize(_vidCol.first().folder + "\\thumbs\\"));
 
 
 
 
-    var rtn = {
-            meta: [],
-            parse: function (vidCol) {
-                this.meta = extractMetadata(vidCol);
-                this.exportData();
-            },
-            createThumbnails: function (vidCol) {
-                return doThumbs(vidCol)
-            },
-            exportData: function () {
-                db.saveData(this.meta);
-            }
-        };
+
+    function makeThumbnail(item, thumbFolder) {
 
 
-
-    function doThumbs(item, thumbFolder) {
-
-        item.each(function(item) {
-
+        /**
+         * Get the absolute path to the video
+         * @param vidName
+         */
             function thumbFile(vidName) {
                 return path.join(thumbFolder, path.basename(vidName + "-thumb", path.extname((vidName))) + ".png");
             }
@@ -59,49 +44,71 @@ module.exports = function (vidCol) {
 
 
 
-        });
 
-        return result;
     }
 
 
-    function extractMetadata(vidCol)
-    {
+    function extractMetadata(vidCol) {
         var meta = [];
-        vidCol.each(function(item) {
+
+        vidCol.each(function (item) {
+            console.log(item);
             meta.push(getMeta(item));
         });
+
+
+
         return meta;
+
     }
 
 //FFMpeg Meta and Thumbnails
     function getMeta(vid) {
+        var metaObj = {};
+        //Get Video MetaData using ffmpeg
+        ffmpeg.ffprobe(vid.path, function (err, metadata) {
+            if (err) throw err;
 
-            //Get Video MetaData using ffmpeg
-            ffmpeg.ffprobe(vid.path, function (err, metadata) {
-                if (err) throw err;
 
+            metaObj = {
+                name: path.basename(metadata.format.filename, path.extname(metadata.format.filename)),
+                filename: path.basename(metadata.format.filename),
+                path: path.relative(process.cwd(), metadata.format.filename),
+                duration: metadata.streams[0].duration,
+                codec: metadata.streams[0].codec_name,
+                width: metadata.streams[0].width,
+                height: metadata.streams[0].height,
+                thumb: thumbFolder,
+                categories: [],
+                tags: []
+            };
 
-                var meta = {
-                    name: path.basename(metadata.format.filename, path.extname(metadata.format.filename)),
-                    filename: path.basename(metadata.format.filename),
-                    path: path.relative(process.cwd(), metadata.format.filename),
-                    duration: metadata.streams[0].duration,
-                    codec: metadata.streams[0].codec_name,
-                    width: metadata.streams[0].width,
-                    height: metadata.streams[0].height,
-                    thumb: thumbFolder,
-                    categories: [],
-                    tags: []
-                };
+            console.log("ffprobe callback: ------------ \r\n");
+            console.dir(metaObj);
+            console.log("\r\n /----------- end ffprobe callback");
+        });
 
-               return meta
+        return metaObj;
+    }
 
+    return {
+        db: db,
+        thumbFolder: _thumbFolder,
+        meta: [],
+        parse: function () {
+            this.meta = extractMetadata(_vidCol);
+            this.exportData();
+        },
+        createThumbnails: function () {
+            _vidCol.each(function(v) {
+                return makeThumbnail(v, this.thumbFolder);
             });
+
+        },
+        exportData: function () {
+            this.db.saveData(this.meta);
         }
-
-
-
+    };
 
 };
 

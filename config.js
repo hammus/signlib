@@ -28,7 +28,8 @@ module.exports = (function() {
             ]
         },
         dataFile: path.normalize(process.cwd() + "\\data.json"),
-        compicsDataFile: path.normalize(process.cwd() + "\\compics.json")
+        compicsDataFile: path.normalize(process.cwd() + "\\compics.json"),
+        root: process.cwd()
 
     }
 })();

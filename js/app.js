@@ -3,8 +3,8 @@ angular.module('myApp', ['ngRoute', 'ngTagsInput'])
         $routeProvider
             .when('/', {
                 templateUrl: 'views/home.html',
-                controller: 'homeController',
-                resolve: {}
+                controller: 'homeController'
+
             }).when('/compics', {
                 templateUrl: 'views/compics.html',
                 controller: 'compicsController'
@@ -22,4 +22,18 @@ angular.module('myApp', ['ngRoute', 'ngTagsInput'])
                 redirectTo: '/'
             });
     }]);
+    //.factory('Person', function(visitor) {
+    //    return function Person (name)
+    //    {
+    //        this.name = name;
+    //        this.greet = function() {
+    //            if(visitor.country === 'AU') {
+    //                return 'G\'day, ' + this.name + ' ya cunt.';
+    //            } else {
+    //                return "Hey " + this.name + "!";
+    //            }
+    //        }
+    //    }
+    //});
+
 

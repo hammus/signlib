@@ -5,8 +5,8 @@ module.exports = (function () {
      * @name Iterator
      * @param {Array|*} itemsArr Collection Content
      */
-    var Iterator = function (itemsArr) {
-
+     function Iterator (itemsArr) {
+        itemsArr = itemsArr || [];
 
         return {
             /**
@@ -28,7 +28,9 @@ module.exports = (function () {
              * How many items are in the Array?
              * @memberof Iterator
              */
-            length: itemsArr.length,
+            length: function() {
+                return itemsArr.length;
+            },
 
             /**
              * Add an item to the collection
@@ -37,8 +39,8 @@ module.exports = (function () {
              * @returns {exports}
              */
             add: function (item) {
-                this.items.push(item);
-                return this;
+                return this.items.push(item);
+
             },
 
             /**
@@ -133,10 +135,12 @@ module.exports = (function () {
              * @returns {*}
              */
             get: function (index) {
-                return this.item[index];
+                return this.items[index];
             },
 
-
+            last: function() {
+              return this.items[this.items.length - 1];
+            },
 
             /**
              * Pop the last value off the Collection and return it
@@ -157,12 +161,14 @@ module.exports = (function () {
              * @alias Iterator#add
              */
             push: function (item) {
-                this.add(item);
+                return this.add(item);
             }
 
 
+
+
         };
-    };
+    }
 
     return Iterator;
 })();

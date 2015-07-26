@@ -3,7 +3,16 @@
  */
 module.exports = function (grunt) {
     grunt.initConfig({
-        clean: ['doc'],
+        clean: ['doc', 'data.json'],
+       'mocha-chai-sinon': {
+            dev: {
+                src: ['test/*.js'],
+                options: {
+                    ui: 'bdd',
+                    reporter: 'spec'
+                }
+            }
+        },
         jsdoc: {
 
             dist: {
@@ -17,8 +26,11 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-mocha-chai-sinon');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-jsdoc');
 
-    grunt.registerTask('default', ['clean', 'jsdoc']);
+    grunt.registerTask('test', ['clean', 'mocha-chai-sinon']);
+    grunt.registerTask('jsdoc', ['clean', 'jsdoc']);
+
 };

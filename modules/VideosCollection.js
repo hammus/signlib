@@ -1,31 +1,21 @@
-module.exports = (function (videos) {
+module.exports = function (videos, Iterator) {
+
+
+    Iterator = Iterator || require('modules/BasesClasses/Iterator.js');
     var path = require('path');
-    var Iterator = require('modules/BasesClasses/Iterator.js');
-    var model = new Iterator.extend({
-            name: function () {
-                return this.current().name;
-            },
-            filename: function () {
-                return this.current().filename;
-            },
-            folder: function() {
-                return this.current().folder;
-            },
-            path: function() {
-                return this.current().path;
-            }
-    });
+
+    var model = new Iterator();
 
     for (var v in videos) {
-        model.push(
+        model.add(
             {
-                name: path.basename(videos[v], path.extname(videos[v])),
-                filename: path.basename(videos[v]),
-                folder: path.dirname(videos[v]),
-                path: videos[v]
+                name: path.normalize(path.basename(videos[v], path.extname(videos[v]))),
+                filename: path.normalize(path.basename(videos[v])),
+                folder: path.normalize(path.dirname(videos[v])),
+                path: path.normalize(videos[v])
             });
     }
 
 
     return model;
-})(videos);
+};
