@@ -1,7 +1,7 @@
 {
   "folders": {
-    "videos": "videos/",
-    "compic": {
+    "videoRoot": "videos/",
+    "compicRoot": {
       "color": "compics/Color/",
       "mono": "compics/Mono/"
     },
