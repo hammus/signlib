@@ -29,5 +29,8 @@
   },
   "webkit": {
     "plugin": true
+  },
+  "devDependencies": {
+    "grunt-typescript": "^0.6.2"
   }
 }

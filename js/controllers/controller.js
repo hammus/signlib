@@ -31,7 +31,7 @@ myApp.controller("homeController", function($scope) {
             console.error(err);
         }
 
-        if($scope.MVideos.length == null)
+        if(typeof MVideos == 'undefined')
         {
             console.error("Data File Didn't Load");
         }
