@@ -2,7 +2,8 @@ module.exports = function (vidCol, db) {
     var ffmpeg = require("fluent-ffmpeg"),
         path = require('path'),
         _vidCol = vidCol,
-        _thumbFolder = path.relative(process.cwd(), path.normalize(_vidCol.first().folder + "\\thumbs\\"));
+        _thumbFolder = path.relative(process.cwd(), path.normalize(_vidCol.first().folder + "\\thumbs\\")),
+        async = require("async");
 
 
 
@@ -83,9 +84,7 @@ module.exports = function (vidCol, db) {
                 tags: []
             };
 
-            console.log("ffprobe callback: ------------ \r\n");
-            console.dir(metaObj);
-            console.log("\r\n /----------- end ffprobe callback");
+
         });
 
         return metaObj;
@@ -96,8 +95,8 @@ module.exports = function (vidCol, db) {
         thumbFolder: _thumbFolder,
         meta: [],
         parse: function () {
-            this.meta = extractMetadata(_vidCol);
-            this.exportData();
+            vidCol.reset();
+
         },
         createThumbnails: function () {
             _vidCol.each(function(v) {

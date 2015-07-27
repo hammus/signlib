@@ -20,13 +20,13 @@ module.exports = function(config) {
         'node_modules/angular-mocks/angular-mocks.js',
         './js/app.js',
         './js/services/services.js',
-        './test/ngtest.js'
+        'ngtest.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-        './js/controllers/*.js',
+        './js/controllers/*.js'
 
 
     ],
