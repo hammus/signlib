@@ -1,7 +1,7 @@
 {
   "folders": {
     "videoRoot": "videos/",
-    "compicRoot": {
+    "compicsRoot": {
       "color": "compics/Color/",
       "mono": "compics/Mono/"
     },
@@ -11,13 +11,16 @@
       "router": "js/router",
       "app": "js/",
       "node_modules": "node_modules/"
-    }
+    },
+    "data": "data/",
+    "backup": "data/backup/"
 
   },
   "extensions": {
     "videos": ["**.mp4", "**.m4v", "**.webm", "**.ogg"],
-    "images": ["**.gif", "**.png", "**.bmp", "**.jpg", "**.jpeg"]
+    "compics": ["**.gif", "**.png", "**.bmp", "**.jpg", "**.jpeg"]
   },
-  "dataFile": "./data.json",
+  "videoDataFile": "data/videoData.json",
+  "compicDataFile": "data/compicData.json",
   "configFile": "./config.json"
 }

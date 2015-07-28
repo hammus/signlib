@@ -1,0 +1,13 @@
+<main>
+    <section class="video-container">
+        <article class="video" data-ng-repeat="compic in MCompics" id="{{$index}}">
+            <img ng-src="{{compic.folder}}" class="compic" />
+            <span class="video-title"><p>{{compic.name}}</p></span>
+
+            <!--<div class="btn-group center-block">-->
+                <!--<a href="#/player/{{$index}}" class="btn btn-sm btn-success">Play</a>-->
+                <!--<a href="#/options/{{$index}}" class="btn btn-sm btn-danger">Edit</a>-->
+            <!--</div>-->
+        </article >
+    </section>
+</main>

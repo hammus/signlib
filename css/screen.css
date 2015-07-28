@@ -243,3 +243,7 @@ video {
 .video-container .video {
   flex: 1 1 auto;
 }
+
+.compic {
+    width: 25%;
+}
