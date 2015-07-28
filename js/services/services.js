@@ -9,7 +9,7 @@ var util = require('util');
 var slash = require('slash');
 
 angular.module('myApp')
-    .factory('MVideos', ['FileCheck', function (fileCheck) {
+    .factory('VideoData', [function (fileCheck) {
 
         var MVideos;
         try {

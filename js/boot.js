@@ -9,3 +9,8 @@
 //global.MVideos = MVideos;
 
 var FileManager = require('FileManager');
+var DataManager = require('DataManager');
+var appData = DataManager.load();
+
+
+

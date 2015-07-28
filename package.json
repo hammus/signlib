@@ -42,6 +42,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compress": "^0.13.0",
     "grunt-jsdoc": "^0.6.7",
+    "grunt-nw-builder": "^2.0.0",
     "grunt-typescript": "^0.6.2",
     "karma": "^0.13.3",
     "karma-chai": "^0.1.0",

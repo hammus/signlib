@@ -2,7 +2,9 @@
 
 
 angular.module('myApp').controller("homeController",['$scope', '$window', function($scope, $window) {
-    //var database        = require('database');
+
+    var dataManager = global.exports.dataManager;
+    var MVideos = global.exports.data;
     $scope.headerSrc    = 'views/header.html';
     $scope.viewStyle    = 'css/header.css';
 
@@ -17,7 +19,7 @@ angular.module('myApp').controller("homeController",['$scope', '$window', functi
 
     $scope.init = function()
     {
-        $scope.MVideos = $window.MVideos;
+        $scope.MVideos = MVideos;
     };
 
 
@@ -34,7 +36,7 @@ angular.module('myApp').controller("homeController",['$scope', '$window', functi
     }
 
     $scope.$watch('MVideos', function(newVal, oldVal) {
-        database.saveData(newVal);
+        dataManager.save(newVal);
     }, true);
 
 }]).controller("optionsController", function($scope, $routeParams){
