@@ -6,6 +6,7 @@ angular.module('myApp').controller("homeController",['$scope', function($scope) 
     var dataManager = global.exports.dataManager;
     var Videos = global.exports.data.videos;
     var Compics = global.exports.data.compics;
+    var CONFIG = global.exports.config;
     $scope.headerSrc    = 'views/header.html';
     $scope.viewStyle    = 'css/header.css';
 
@@ -35,18 +36,20 @@ angular.module('myApp').controller("homeController",['$scope', function($scope) 
 
 
     $scope.$watch('MVideos', function(newVal, oldVal) {
-        dataManager.save(newVal);
+        dataManager.save(newVal, CONFIG.videoDataFile);
     }, true);
 
 }]).controller("optionsController", function($scope, $routeParams){
-
-
-
-}).controller("compicsController", function($scope, $routeParams){
     $scope.options = $scope.MVideos[$routeParams.id];
 
 
 }).controller("playerController", function($scope, $routeParams){
+
    $scope.player = $scope.MVideos[$routeParams.id];
+
+}).controller("compicsController", function($scope, $routeParams){
+
+
+
 });
 
