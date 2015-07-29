@@ -1,6 +1,7 @@
+<ng-include src="'views/header.html'"></ng-include>
 <main>
         <section class="video-container">
-            <article class="video" data-ng-repeat="video in MVideos" id="{{$index}}">
+            <article class="video" data-ng-repeat="video in viewData | filter:query" id="{{$index}}">
                 <img ng-src="{{video.thumb}}" class="video-thumb" />
                 <span class="video-title"><p>{{video.name}}</p></span>
 

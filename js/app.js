@@ -1,9 +1,9 @@
-angular.module('myApp', ['ngRoute', 'ngTagsInput'])
+angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
             templateUrl: 'views/home.html',
-            controller: 'homeController'
+            controller: 'videoController'
         })
             .when('/options/:id', {
             templateUrl: 'views/options.html',
@@ -15,7 +15,8 @@ angular.module('myApp', ['ngRoute', 'ngTagsInput'])
         })
             .when('/compics/', {
                 templateUrl: 'views/compics.html',
-                controller: 'compicsController'
+                controller: 'compicsController',
+                css: 'css/compics.css'
             })
             .otherwise({
             redirectTo: '/'

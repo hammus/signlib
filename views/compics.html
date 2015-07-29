@@ -1,13 +1,14 @@
+<ng-include src="'views/header.html'"></ng-include>
 <main>
-    <section class="video-container">
-        <article class="compic-container" data-ng-repeat="compic in MCompics" id="{{$index}}">
+    <section class="compic-wrapper">
+        <article class="compic-container" data-ng-repeat="compic in viewData | filter:query" id="{{$index}}">
             <img ng-src="{{compic.folder}}" class="compic" />
-            <span class="compic-title"><p>{{compic.name}}</p></span>
+            <p class="compic-title">{{compic.name}}</p>
 
-            <!--<div class="btn-group center-block">-->
-                <!--<a href="#/player/{{$index}}" class="btn btn-sm btn-success">Play</a>-->
-                <!--<a href="#/options/{{$index}}" class="btn btn-sm btn-danger">Edit</a>-->
-            <!--</div>-->
+            <div class="btn center-block">
+
+                <a href="#/compic-options/{{$index}}" class="btn btn-sm btn-danger">Edit</a>
+            </div>
         </article >
     </section>
 </main>

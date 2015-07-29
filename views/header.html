@@ -1,32 +1,36 @@
 <header>
     <nav role="navigation" class="navbar navbar-fixed-top" id="main-nav">
         <div class="container-fluid">
-            <ul id="main-nav-list" class="nav navbar-nav">
+            <ul  class="nav navbar-nav navbar-left">
                 <li>
-                    <a id="a-home" href="#" class="btn-blue">
+                    <a id="a-home" href="#" class="btn-blue app-btn">
                         <div>Home</div>
                     </a>
                 </li>
+
                 <li >
-                    <a class="btn-green" id="a-categories" href="#/categories/">
-                        <div>Categories</div>
-                    </a>
-                </li>
-                <li >
-                    <a class="btn-gold" id="a-compic" href="#/compics/">
+                    <a class="btn-gold app-btn" id="a-compic" href="#/compics/">
                         <div>Compics</div>
                     </a>
                 </li>
                 <li >
-                    <a class="btn-red" ng-click="quit();" id="a-exit" href="#">
+                    <a class="btn-red app-btn" ng-click="quit();" id="a-exit" href="#">
                         <div>Exit</div>
                     </a>
                 </li>
 
             </ul>
+            <div class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" style="min-width: 250px;" ng-model="query[queryBy]">
+                </div>
+
+            </div>
         </div>
+
 
 
     </nav>
 
 </header>
+

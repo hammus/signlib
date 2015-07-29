@@ -1,0 +1,32 @@
+
+.compic {
+    display: block;
+    max-width:150px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+    background: #fefefe;
+    margin: auto;
+
+}
+
+.compic-wrapper {
+    width: 85%;
+    margin: auto;
+    background-color: rgba(255,255,255,0.1);
+
+}
+
+.compic-container {
+    width: 20%;
+    float: left;
+
+}
+
+.compic-title {
+    font-family: 'Lato', Tahoma, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-align: center;
+
+}

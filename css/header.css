@@ -4,50 +4,57 @@
 }
 
 
-
+body {
+    margin-top: 100px;
+}
 #main-nav {
-  font-family: 'Lato';
+    font-family: 'Lato';
     font-weight: lighter;
-  text-transform: uppercase;
-  height: 50px;
-  margin-bottom: 20px;
+    text-transform: uppercase;
+    height: 50px;
+    background-color: #1a2133;
 }
-/* line 8, sass/header.scss */
-#main-nav ul {
-  height: 100%;
+
+.app-btn {
+    min-width: 150px;
+}
+
+#main-nav-list {
+    background-color: #1a2133;
+    width: 60%;
+    float: left;
+}
+.container-fluid {
     width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  list-style: none;
+    background-color: #1a2133;
 }
+
+/* line 8, sass/header.scss */
+
+
 /* line 17, sass/header.scss */
 #main-nav li {
-  /*flex: 1 1 auto;*/
-  /*display: flex;*/
-  /*align-items: center;*/
+    /*flex: 1 1 auto;*/
+    /*display: flex;*/
+    /*align-items: center;*/
     width: 200px;
     height: 100%;
 }
+
 /* line 25, sass/header.scss */
 .nav a {
-  height: 100%;
-  font-size: 1.3rem;
-  width: 100%;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+    height: 100%;
+    font-size: 1.3rem;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
-
-
 
 /* line 33, sass/header.scss */
 #main-nav a div {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
 
 }
 

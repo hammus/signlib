@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" ng-controller="homeController">
+<html ng-app="myApp">
 <head>
     <title>India Spode's Signing Library</title>
 
@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css"/>
     <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.css"/>
-    <link rel="stylesheet" href="css/screen.css" media="screen, projection" type="text/css"/>
     <link rel="stylesheet" href="bower_components/videojs/dist/video-js/video-js.css"/>
-    <link rel="stylesheet" href="{{viewStyle}}"/>
-    <!-- Main Style -->
-    <script src="boot.js" type="application/javascript"></script>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/screen.css" media="screen, projection" type="text/css"/>
+    <link rel="stylesheet" href="css/header.css" media="screen, projection" type="text/css" />
 
     <!-- END STYLES -->
+
     <!-- APP BOOT -->
-
-
+    <script src="boot.js" type="application/javascript"></script>
     <!-- END APP BOOT -->
+
+
     <!-- VENDOR JS -->
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
@@ -26,6 +28,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
     <script src="bower_components/videojs/dist/video-js/video.dev.js"></script>
+
 
     <!-- END VENDOR JS -->
 
@@ -41,9 +44,10 @@
 
 </head>
 <body>
-<ng-include src="headerSrc"></ng-include>
 <div id="content">
     <ng-view></ng-view>
 </div>
+
+<script src="bower_components/angular-route-styles/route-styles.js" type="application/javascript"></script>
 </body>
 </html>
