@@ -1,11 +1,11 @@
-angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles'])
+angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles', 'ngLodash'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
             templateUrl: 'views/home.html',
             controller: 'videoController'
         })
-            .when('/options/:id', {
+            .when('/options/:type/:id', {
             templateUrl: 'views/options.html',
             controller: 'optionsController'
         })

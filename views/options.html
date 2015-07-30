@@ -1,9 +1,10 @@
+<ng-include src="'views/header.html'"></ng-include>
 <main class="container">
-    <article class="row container">
+    <div class="row container">
         <div class="col-md-2"></div>
         <div class="col-md-8">
 
-            <div class="panel panel-primary">
+            <div id="options-panel" class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{options.name}}</h3>
                 </div>
@@ -14,8 +15,7 @@
 
                             <tr>
                                 <td class="key">Word</td>
-                                <td class="value"><input ng-model="options.name" type="text"
-                                                         /></td>
+                                <td class="value"><input ng-model="options.name" type="text"/></td>
                             </tr>
                             <tr>
                                 <td class="key">Categories</td>
@@ -42,7 +42,15 @@
         </div>
         </div>
         <div class="col-md-2"></div>
-    </article>
+    </div>
+    <div class="row-container">
+        <div class="col-md-12">
+
+                <button class="btn btn-success center" role="button" back>Back</button>
+
+
+        </div>
+    </div>
 
 
 </main>

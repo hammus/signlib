@@ -192,6 +192,12 @@ body {
 video {
   display: block;
   margin: auto;
+
+}
+
+
+.video {
+    margin-bottom: 20px;
 }
 
 /* line 34, sass/screen.scss */
@@ -227,7 +233,31 @@ video {
 
 /* line 64, sass/screen.scss */
 .btn-group {
-  width: 80%;
+  width: 100%;
+}
+
+.btn-group-wrap {
+    text-align: center;
+}
+
+div.btn-group {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+}
+
+div.btn-group a {
+    float: left;
+}
+.center {
+    display: block;
+    margin: auto;
+}
+
+.center a {
+    display: block;
+    margin: auto;
 }
 
 /* line 68, sass/screen.scss */
@@ -237,8 +267,19 @@ video {
       justify-content: space-around;
       width: 80%;
       margin: auto;
+
     }
 /* line 76, sass/screen.scss */
 .video-container .video {
   flex: 1 1 auto;
+}
+
+#options-panel {
+    margin-top: 20px;
+}
+
+.video-title {
+    color: #fefefe;
+    text-transform: uppercase;
+    text-align: center;
 }

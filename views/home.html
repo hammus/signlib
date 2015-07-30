@@ -1,14 +1,16 @@
 <ng-include src="'views/header.html'"></ng-include>
 <main>
         <section class="video-container">
-            <article class="video" data-ng-repeat="video in viewData | filter:query" id="{{$index}}">
+            <article class="video" data-ng-repeat="video in viewData | filter:query" id="{{viewData.indexOf(video)}}">
                 <img ng-src="{{video.thumb}}" class="video-thumb" />
-                <span class="video-title"><p>{{video.name}}</p></span>
-
-                    <div class="btn-group center-block">
-                        <a href="#/player/{{$index}}" class="btn btn-sm btn-success">Play</a>
-                        <a href="#/options/{{$index}}" class="btn btn-sm btn-danger">Edit</a>
+                <p class="video-title">{{video.name}}</p>
+                    <div class="btn-group-wrap">
+                        <div class="btn-group center">
+                            <a href="#/player/{{viewData.indexOf(video)}}" class="btn btn-sm btn-success">Play</a>
+                            <a href="#/options/video/{{viewData.indexOf(video)}}" class="btn btn-sm btn-danger">Edit</a>
+                        </div>
                     </div>
+
             </article >
         </section>
 </main>

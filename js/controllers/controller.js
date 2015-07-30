@@ -1,7 +1,7 @@
 
 
 
-angular.module('myApp').controller("homeController",['$scope', '$routeParams', function($scope, $routeParams) {
+angular.module('myApp').controller("homeController",['$scope', '$routeParams', 'SaveData', function($scope, $routeParams) {
 
 
 
@@ -12,6 +12,7 @@ angular.module('myApp').controller("homeController",['$scope', '$routeParams', f
 
     $scope.quit = function()
     {
+
         var gui = require("nw.gui");
         gui.App.quit();
 
@@ -28,55 +29,44 @@ angular.module('myApp').controller("homeController",['$scope', '$routeParams', f
 
 
 
-}]).controller("optionsController", function($scope, $routeParams){
+}]).controller("optionsController", ['$scope', '$routeParams', 'SaveData', function($scope, $routeParams, saveFile){
 
-    var dataManager = global.exports.dataManager;
-    var Videos = global.exports.data.videos;
-    var CONFIG = global.exports.config;
+    
 
+    //Get the correct infor based on the url (Compic or Videos)
+    $scope.viewData = $routeParams.type == "video" ? global.exports.data.videos : global.exports.data.compics;
 
-    $scope.viewData = Videos;
-    $scope.$watch('viewData', function(newVal, oldVal) {
-        dataManager.save(newVal, CONFIG.videoDataFile);
-    }, true);
+    $scope.$watch('viewData', saveFile, true);
+
     $scope.options = $scope.viewData[$routeParams.id];
 
 
-}).controller("playerController", function($scope, $routeParams){
+}]).controller("playerController", function($scope, $routeParams){
 
-   $scope.player = $scope.MVideos[$routeParams.id];
+    $scope.viewData = global.exports.data.videos;
+   $scope.player = $scope.viewData[$routeParams.id];
 
 })
-    .controller("compicsController", ["$scope", "$routeParams","$log", function($scope, $routeParams, $log){
+    .controller("compicsController", ["$scope", 'SaveData', function($scope, saveFile){
 
         $scope.query = {};
         $scope.queryBy = "$";
-        var dataManager = global.exports.dataManager;
-        var Compics = global.exports.data.compics;
-        var CONFIG = global.exports.config;
 
-        $scope.viewData = Compics;
-        $scope.$watch('viewData', function(newVal, oldVal) {
-            dataManager.save(newVal, CONFIG.compicDataFile);
-        }, true);
+        $scope.viewData = global.exports.data.compics;
 
-        $log.info("Boo compics");
+        $scope.$watch('viewData', saveFile, true);
 
 
-    }]).controller("videoController", ["$scope", "$routeParams", "$log", function($scope, $routeParams, $log){
+
+
+    }]).controller("videoController", ["$scope", 'SaveData', function($scope, saveFile){
 
         $scope.query = {};
         $scope.queryBy = "$";
-        var dataManager = global.exports.dataManager;
-        var Videos = global.exports.data.videos;
-        var CONFIG = global.exports.config;
 
-        $log.info("Boo vids");
+        $scope.viewData = global.exports.data.videos;
 
-        $scope.viewData = Videos;
-        $scope.$watch('viewData', function(newVal, oldVal) {
-            dataManager.save(newVal, CONFIG.videoDataFile);
-        }, true);
+        $scope.$watch('viewData', saveFile, true);
 
 
 }]);

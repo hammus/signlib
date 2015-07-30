@@ -1,29 +1,52 @@
 /**
  * Created by Liam on 27/07/2015.
  */
-var fs = require("fs");
-var path = require("path");
-var jf = require('jsonfile');
-var util = require('util');
-//var url = require('url');
-var slash = require('slash');
 
 angular.module('myApp')
-    .factory('VideoData', [function (fileCheck) {
+    .factory('ChangeFileExt', ['$log', 'GetExcept', 'lodash', function ($log, excepts) {
 
-        var MVideos;
-        try {
 
-                    MVideos = fileCheck();
-                    return MVideos;
+        return function(file, obj) {
+            var path = require("path");
+            var err = excepts("ParameterError");
 
-        } catch (err) {
-            console.error(err);
+            if(!obj.hasOwnProperty('from') || !obj.hasOwnProperty('to')) throw err;
+
+
+            var muted = path.join(
+                path.dirname(file),
+                path.basename(file, obj.from) + obj.to
+            );
+
+            return muted;
+        }
+
+    }]).factory('GetExcept', ['lodash', 'Excepts', function(lodash, excepts) {
+        return function(name) {
+            lodash.find(excepts, function(obj) {
+                obj.name = name;
+            });
+        }
+    }])
+
+    .factory('SaveData', [function(){
+        var dataManager = global.exports.dataManager;
+        var CONFIG = global.exports.config;
+
+        return function(newVal, oldVal) {
+
+            dataManager.save(newVal, CONFIG.videoDataFile);
         }
 
     }])
-    .factory('FileCheck', ['CONFIG', function (CONFIG) {
 
 
 
-    }]);
+    .constant('Excepts', [
+        {
+            name: 'ParameterError',
+            message: "2nd paramter must be an object with the following keys: {from: string, to: string, flag: string}."
+        }
+    ]
+
+    );
