@@ -1,7 +1,51 @@
+<ng-include src="'views/header.html'"></ng-include>
 <div class="container">
     <video class="video-js vjs-default-skin" width="{{player.width}}" height="{{player.height}}"
            controls autoplay preload="auto" poster="{{player.thumb}}">
         <source data-ng-src="{{player.relative}}" type="video/mp4">
     </video>
+    <div class="row container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
 
+            <div id="options-panel" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{options.name}}</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <table class="table table-hover table-striped">
+                            <tbody >
+
+                            <tr>
+                                <td class="key">Word</td>
+                                <td class="value"><input ng-model="options.name" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <td class="key">Categories</td>
+                                <td class="value" >
+                                    <!--<span data-ng-repeat="cat in video.categories" class="label label-success">{{cat}} </span>-->
+                                    <tags-input ng-model="options.categories"></tags-input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="key">Tags</td>
+                                <td class="value" >
+                                    <tags-input ng-model="options.tags"></tags-input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="key">Location</td>
+                                <td class="value"><input type="text" ng-model="options.path"/></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <button class="btn btn-success center" role="button" back>Back</button>
 </div>
