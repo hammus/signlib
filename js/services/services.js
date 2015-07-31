@@ -35,6 +35,11 @@ angular.module('myApp')
 
         return function(newVal, oldVal) {
 
+            //Make sure the object is valid
+            if(typeof(newVal) !== 'object') {
+                console.error()
+            }
+
             dataManager.save(newVal, CONFIG.videoDataFile);
         }
 
