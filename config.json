@@ -1,26 +1,41 @@
 {
-  "folders": {
-    "videoRoot": "videos/",
-    "compicsRoot": {
-      "color": "compics/Color/",
-      "mono": "compics/Mono/"
-    },
-    "scripts": {
-      "controllers": "js/controllers",
-      "services": "js/services",
-      "router": "js/router",
-      "app": "js/",
-      "node_modules": "node_modules/"
-    },
-    "data": "data/",
-    "backup": "data/backup/"
-
-  },
-  "extensions": {
-    "videos": ["**.mp4", "**.m4v", "**.webm", "**.ogg"],
-    "compics": ["**.gif", "**.png", "**.bmp", "**.jpg", "**.jpeg"]
-  },
-  "videoDataFile": "data/videoData.json",
-  "compicDataFile": "data/compicData.json",
-  "configFile": "./config.json"
+	"folders": {
+		"videoRoot": "videos/",
+		"compicsRoot": {
+			"color": "compics/Color/",
+			"mono": "compics/Mono/"
+		},
+		"scripts": {
+			"controllers": "js/controllers",
+			"services": "js/services",
+			"router": "js/router",
+			"app": "js/",
+			"node_modules": "node_modules/"
+		},
+		"data": "data/",
+		"backup": "data/backup/"
+	},
+	"extensions": {
+		"videos": [
+			"**.mp4",
+			"**.m4v",
+			"**.webm",
+			"**.ogg"
+		],
+		"compics": [
+			"**.gif",
+			"**.png",
+			"**.bmp",
+			"**.jpg",
+			"**.jpeg"
+		]
+	},
+	"dataFiles": {
+		"videoData": "data/videoData.json",
+		"compicData": "data/compicData.json",
+		"config": "./config.json"
+	},
+	"options": {
+		"isFirstBoot": false
+	}
 }

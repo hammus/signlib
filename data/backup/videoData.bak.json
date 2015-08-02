@@ -9,7 +9,14 @@
 		"width": 632,
 		"height": 480,
 		"thumb": "videos\\thumbs\\A-thumb.png",
-		"categories": [],
+		"categories": [
+			{
+				"text": "liam"
+			},
+			{
+				"text": "whan"
+			}
+		],
 		"tags": [
 			{
 				"text": "point-hand"

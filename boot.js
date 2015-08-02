@@ -2,13 +2,15 @@ global.exports = (function () {
 
     var FileManager = require('FileManager');
     var DataManager = require('DataManager');
-    var videoData = DataManager.loadVideoData();
-    var compicData = DataManager.loadCompicData();
+
     var config = FileManager.config;
+    var videoData, compicData;
+
+    compicData = DataManager.loadCompicData();
+    videoData = DataManager.loadVideoData();
 
 
-
-    return  {
+    return {
         data: {
             videos: videoData,
             compics: compicData

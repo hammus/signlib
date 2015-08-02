@@ -3,6 +3,7 @@
  */
 
 angular.module('myApp')
+    .factory('SaveData', ['setLocalStorage', 'getLocalStorage'])
     .factory('ChangeFileExt', ['$log', 'GetExcept', 'lodash', function ($log, excepts) {
 
 
@@ -21,7 +22,10 @@ angular.module('myApp')
             return muted;
         }
 
-    }]).factory('GetExcept', ['lodash', 'Excepts', function(lodash, excepts) {
+    }])
+    .factory('GetExcept',
+    ['lodash', 'Excepts',
+        function(lodash, excepts) {
         return function(name) {
             lodash.find(excepts, function(obj) {
                 obj.name = name;
@@ -29,7 +33,9 @@ angular.module('myApp')
         }
     }])
 
-    .factory('SaveData', [function(){
+    .factory('SaveToDisk',
+    ['$log',
+        function($log){
         var dataManager = global.exports.dataManager;
         var CONFIG = global.exports.config;
 
@@ -37,7 +43,9 @@ angular.module('myApp')
 
             //Make sure the object is valid
             if(typeof(newVal) !== 'object') {
-                console.error()
+                $log.error("The data object is invalid. Skipping save to disk.");
+                $log.log(newVal);
+                return;
             }
 
             dataManager.save(newVal, CONFIG.videoDataFile);
@@ -54,4 +62,4 @@ angular.module('myApp')
         }
     ]
 
-    );
+);
