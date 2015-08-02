@@ -1,32 +1,36 @@
 module.exports =function(grunt){
     grunt.initConfig({
-        jsdoc : {
-            dist: {
-                src: [
-                    'js/services/LocalDataService.js'
-                ],
+
+        compress: {
+            videos: {
                 options: {
-                    destination: 'docs/',
-                    configure: 'node_modules/angular-jsdoc/conf.json',
-                    template: 'node_modules/angular-jsdoc/template'
-                }
-            }
-        },
-        nwjs: {
-            options: {
-                platforms: ['win','osx'],
-                buildDir: './webkitbuilds' // Where the build version of my NW.js app is saved
+                    archive: 'build/videos.zip'
+                },
+                mode: 'zip',
+                files: [
+                    {src: ['videos/**'], dest: './'}
+
+                ]
             },
-            src: ['./**/*'] // Your NW.js app
+            compics: {
+                options: {
+                    archive: 'build/compics.zip'
+                },
+                mode: 'zip',
+                files: [
+                    {src: ['compics/**'], dest: './'}
+                ]
+            }
+
         }
+
     });
 
-    grunt.loadNpmTasks('grunt-nw-builder');
-    grunt.loadNpmTasks('grunt-jsdoc');
 
 
-    grunt.registerTask('build', ['nwjs']);
-    grunt.registerTask('doc', ['jsdoc:dist']);
+
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.registerTask('zipitup', ['compress']);
 
 };
 

@@ -1,10 +1,9 @@
 videos/
 bower_components/
-ffmpeg/
 node_modules/*/
-npm-debug.log
 .idea/
 css/.sass-cache
 css/sass/.sass-cache
 compics/
 cache/
+build/
