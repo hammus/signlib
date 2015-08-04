@@ -7,3 +7,4 @@ css/sass/.sass-cache
 compics/
 cache/
 build/
+*/**/Thumbs.db
