@@ -1,3 +1,4 @@
+/*min checked */
 angular.module('myApp').controller("homeController",
     ['$scope', 'LocalDataService',
     function ($scope, localData) {
