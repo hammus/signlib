@@ -44,6 +44,8 @@
     "grunt-jsdoc": "^0.6.7",
     "grunt-processhtml": "^0.3.8",
     "grunt-typescript": "^0.6.2",
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.8.0",
     "jsdoc": "^3.3.2",
     "karma": "^0.13.3",
     "karma-chai": "^0.1.0",
