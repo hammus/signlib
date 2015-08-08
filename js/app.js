@@ -11,7 +11,8 @@ angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles', 'ngLodash', 'm
             })
             .when('/player/:id', {
                 templateUrl: 'views/player.html',
-                controller: 'playerController'
+                controller: 'playerController',
+                css: 'css/player.css'
             })
             .when('/compics/', {
                 templateUrl: 'views/compics.html',

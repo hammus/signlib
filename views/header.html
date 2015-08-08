@@ -14,8 +14,13 @@
                     </a>
                 </li>
                 <li >
-                    <a class="btn-red app-btn" ng-click="quit();" id="a-exit" href="#" quit>
+                    <a class="btn-red app-btn" id="a-exit" href="#" quit>
                         <div>Exit</div>
+                    </a>
+                </li>
+                <li ng-if="DEBUG">
+                    <a class="btn-green app-btn" ng-click="refreshFromHD();" id="a-refresh" href="#">
+                        <div>Refresh Data</div>
                     </a>
                 </li>
 

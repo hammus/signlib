@@ -7,10 +7,19 @@ angular.module('myApp').controller("homeController",
         $scope.localData = localData;
         $scope.viewData = localData.startup(global.exports.data);
 
+        //TODO Change this to false in production
+        $scope.DEBUG = true;
+
         $scope.$watch('viewData', function (newVal, oldVal) {
             localData.saveData({name: "videos", data: newVal.videos});
             localData.saveData({name: "compics", data: newVal.compics});
         }, true);
+
+        $scope.refreshFromHD = function() {
+            var videos = localData.saveData({name: "videos", data: global.exports.data});
+            var compics = localData.saveData({name: "compics", data: global.exports.data});
+            $scope.viewData = {videos: videos, compics: compics};
+        }
 
     }])
 
@@ -56,6 +65,5 @@ angular.module('myApp').controller("homeController",
         $scope.queryBy = "$";
 
         $scope.viewData = $scope.$parent.viewData.videos;
-
 
     }]);

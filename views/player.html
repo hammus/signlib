@@ -2,7 +2,7 @@
 <div class="container">
     <video class="video-js vjs-default-skin" width="{{player.width}}" height="{{player.height}}"
            controls autoplay preload="auto" poster="{{player.thumb}}">
-        <source data-ng-src="{{player.path}}" type="video/webm">
+        <source ng-src="{{player.path}}" type="video/webm">
     </video>
     <div class="row container">
         <div class="col-md-2"></div>
@@ -51,5 +51,5 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-    <button class="btn btn-success center" role="button" back>Back</button>
+    <button class="btn btn-green center" role="button" back>Back</button>
 </div>

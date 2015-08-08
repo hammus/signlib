@@ -1,15 +1,10 @@
 /* line 1, sass/header.scss */
-#a-home, #a-categories, #a-compic, #a-exit {
-    color: #ffffff;
-}
 
 
 body {
     margin-top: 100px;
 }
 #main-nav {
-    font-family: 'Lato';
-    font-weight: lighter;
     text-transform: uppercase;
     height: 50px;
     background-color: #1a2133;
@@ -57,9 +52,4 @@ body {
     width: 100%;
 
 }
-
-#main-nav-list > li {
-
-}
-
 

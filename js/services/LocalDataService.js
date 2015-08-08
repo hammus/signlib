@@ -94,7 +94,7 @@ function LocalDataService(localStorageService) {
                 //Store in localStorage
                 try {
                     this.localStorageService.set(name, data);
-                    return true;
+                    return data;
                 } catch (e) {
                     console.log("Error saving to localStorage. " + e.message);
                     console.log(obj);

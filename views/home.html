@@ -1,13 +1,29 @@
 <ng-include src="'views/header.html'"></ng-include>
 <main>
+
         <section class="video-container">
             <article class="video" data-ng-repeat="video in viewData | filter:query" id="{{viewData.indexOf(video)}}">
                 <img ng-src="{{video.thumb}}" class="video-thumb" />
-                <p class="video-title">{{video.name}}</p>
+                <table class="tbl-video-meta">
+                    <tr>
+                        <td class="title-label">Word:</td>
+                        <td class="video-title">{{video.name}}</td>
+                    </tr>
+                    <tr ng-if="video.categories.length > 0" class="tbl-tr-categories">
+                        <td class="title-label">Categories:</td>
+                        <td class="video-title"><span ng-repeat="cat in video.categories">{{cat.text}}</span></td>
+                    </tr>
+                    <tr ng-if="video.tags.length > 0" class="tbl-tr-tags">
+                        <td class="title-label">Tags:</td>
+                        <td class="video-title"><span ng-repeat="vtag in video.tags">{{vtag.text}}</span></td>
+                    </tr>
+                </table>
+                <!--<p class="video-title">{{video.name}}</p>-->
                     <div class="btn-group-wrap">
-                        <div class="btn-group center">
-                            <a href="#/player/{{viewData.indexOf(video)}}" class="btn btn-sm btn-success">Play</a>
-                            <a href="#/options/video/{{viewData.indexOf(video)}}" class="btn btn-sm btn-danger">Edit</a>
+                        <div class="center btn-play">
+                            <a href="#/player/{{viewData.indexOf(video)}}" class="btn btn-green"><span
+                                    class="glyphicon glyphicon-play"></span></a>
+
                         </div>
                     </div>
 
