@@ -40,6 +40,11 @@ angular.module('myApp').controller("homeController",
             $scope.player =  $scope.options = $scope.viewData[$routeParams.id];
             $scope.options.auslan = "http://www.auslan.org.au/dictionary/search/?query=" + $scope.options.name;
 
+            $scope.getFullpath = function(filepath) {
+                var path = require('path');
+                return path.join(process.cwd(), filepath);
+            };
+
             $scope.openAuslan = function(){
                 var gui = require("nw.gui");
                 gui.Shell.openExternal($scope.options.auslan);

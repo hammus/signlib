@@ -9,11 +9,11 @@
                         <td class="title-label">Word:</td>
                         <td class="video-title">{{video.name}}</td>
                     </tr>
-                    <tr ng-if="video.categories.length > 0" class="tbl-tr-categories">
+                    <tr class="tbl-tr-categories">
                         <td class="title-label">Categories:</td>
                         <td class="video-title"><span ng-repeat="cat in video.categories">{{cat.text}}</span></td>
                     </tr>
-                    <tr ng-if="video.tags.length > 0" class="tbl-tr-tags">
+                    <tr  class="tbl-tr-tags">
                         <td class="title-label">Tags:</td>
                         <td class="video-title"><span ng-repeat="vtag in video.tags">{{vtag.text}}</span></td>
                     </tr>

@@ -25,7 +25,7 @@
                                 <td class="key">Categories</td>
                                 <td class="value" >
                                     <!--<span data-ng-repeat="cat in video.categories" class="label label-success">{{cat}} </span>-->
-                                    <tags-input ng-model="options.categories"></tags-input>
+                                    <tags-input placeholder="Add a Category" ng-model="options.categories"></tags-input>
                                 </td>
                             </tr>
                             <tr>
@@ -36,7 +36,7 @@
                             </tr>
                             <tr>
                                 <td class="key">Location</td>
-                                <td class="value"><input type="text" ng-model="options.path"/></td>
+                                <td class="value">{{getFullpath(options.path)}}</td>
                             </tr>
                             <tr>
                                 <td class="key">Search Auslan Sign Bank for "{{options.name}}"</td>
