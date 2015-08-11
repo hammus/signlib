@@ -23,7 +23,7 @@
     "icon": "link.png",
     "toolbar": true,
     "frame": true,
-    "width": 1280,
+    "width": 1024,
     "height": 720,
     "position": "mouse",
     "min_width": 400,

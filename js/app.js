@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles', 'ngLodash', 'myApp.services'])
+angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles', 'ngLodash', 'myApp.services', 'angularUtils.directives.dirPagination'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
