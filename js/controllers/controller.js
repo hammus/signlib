@@ -7,6 +7,10 @@ angular.module('myApp').controller("homeController",
         $scope.localData = localData;
         $scope.viewData = localData.startup(global.exports.data);
 
+
+
+
+
         //TODO Change this to false in production
         $scope.DEBUG = true;
 
@@ -59,9 +63,15 @@ angular.module('myApp').controller("homeController",
         $scope.queryBy = "$";
 
         $scope.viewData = $scope.$parent.viewData.compics;
+            $scope.currentPage = 0;
+            $scope.pageSize = 50;
+            $scope.pageCount = function(){
+                return Math.ceil($scope.viewData.length / $scope.pageSize);
+            };
 
 
-    }])
+
+        }])
     .controller("videoController",
     ["$scope",
         function ($scope) {
@@ -69,6 +79,13 @@ angular.module('myApp').controller("homeController",
         $scope.query = {};
         $scope.queryBy = "$";
 
-        $scope.viewData = $scope.$parent.viewData.videos;
 
-    }]);
+        $scope.viewData = $scope.$parent.viewData.videos;
+            $scope.currentPage = 0;
+            $scope.pageSize = 50;
+            $scope.pageCount = function(){
+                return Math.ceil($scope.viewData.length / $scope.pageSize);
+            };
+
+
+        }]);

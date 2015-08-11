@@ -2,7 +2,7 @@
 <main>
 
         <section class="video-container">
-            <article class="video" data-ng-repeat="video in viewData | filter:query" id="{{viewData.indexOf(video)}}">
+            <article class="video" data-ng-repeat="video in viewData | filter:query | startFrom: currentPage*pageSize | limitTo:pageSize" id="{{viewData.indexOf(video)}}">
                 <img ng-src="{{video.thumb}}" class="video-thumb" />
                 <table class="tbl-video-meta">
                     <tr>
@@ -30,3 +30,10 @@
             </article >
         </section>
 </main>
+
+<footer ng-if="">
+    <div class="navbar-fixed-bottom" id="page-control" style="background: #1a2133;">
+        <p>Page: {{currentPage + 1}}/{{pageCount()}} <button ng-disabled="currentPage == 0;" ng-click="currentPage = currentPage - 1;" class="btn btn-red"><span class="glyphicon glyphicon-step-backward" ></span></button> |
+            <button class="btn btn-green" ng-disabled="currentPage >= viewData / pageSize -1" ng-click="currentPage = currentPage + 1;"><span class="glyphicon glyphicon-step-forward"></span></button></p>
+    </div>
+</footer>
