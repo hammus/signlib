@@ -25,6 +25,12 @@ angular.module('myApp').controller("homeController",
                 $scope.viewData = {videos: videos, compics: compics};
             }
 
+            $scope.getFullpath = function (filepath) {
+                var path = require('path');
+                return path.join(process.cwd(), filepath);
+            };
+
+
         }])
 
     .controller("optionsController",
@@ -33,6 +39,8 @@ angular.module('myApp').controller("homeController",
             //Get the correct infor based on the url (Compic or Videos)
             $scope.viewData = $routeParams.type == "video" ? $scope.$parent.viewData.videos : $scope.$parent.viewData.compics;
             $scope.options = $scope.viewData[$routeParams.id];
+
+            console.log($scope.options);
 
 
         }])
@@ -44,10 +52,6 @@ angular.module('myApp').controller("homeController",
             $scope.player = $scope.options = $scope.viewData[$routeParams.id];
             $scope.options.auslan = "http://www.auslan.org.au/dictionary/search/?query=" + $scope.options.name;
 
-            $scope.getFullpath = function (filepath) {
-                var path = require('path');
-                return path.join(process.cwd(), filepath);
-            };
 
             $scope.openAuslan = function () {
                 var gui = require("nw.gui");
@@ -63,11 +67,6 @@ angular.module('myApp').controller("homeController",
             $scope.queryBy = "$";
 
             $scope.viewData = $scope.$parent.viewData.compics;
-            $scope.currentPage = 0;
-            $scope.pageSize = 50;
-            $scope.pageCount = function () {
-                return Math.ceil($scope.viewData.length / $scope.pageSize);
-            };
 
 
         }])
@@ -81,11 +80,7 @@ angular.module('myApp').controller("homeController",
 
             $scope.viewData = $scope.$parent.viewData.videos;
 
-            //$scope.currentPage = 1;
-            //$scope.pageSize = 50;
-            //$scope.pageCount = function () {
-            //    return Math.ceil($scope.viewData.length / $scope.pageSize);
-            //};
+
 
 
         }]);

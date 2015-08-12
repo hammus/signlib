@@ -15,7 +15,7 @@
 
                             <tr>
                                 <td class="key">Word</td>
-                                <td class="value"><input ng-model="options.name" type="text"/></td>
+                                <td class="value"><input ng-model="options.name" type="text" value="options.name"/></td>
                             </tr>
                             <tr>
                                 <td class="key">Categories</td>
@@ -32,7 +32,7 @@
                             </tr>
                             <tr>
                                 <td class="key">Location</td>
-                                <td class="value"><input type="text" ng-model="options.path"/></td>
+                                <td class="value">{{getFullpath(options.path)}}</td>
                             </tr>
                             </tbody>
                         </table>

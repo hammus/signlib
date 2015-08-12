@@ -7,7 +7,8 @@ angular.module('myApp', ['ngRoute', 'ngTagsInput', 'routeStyles', 'ngLodash', 'm
             })
             .when('/options/:type/:id', {
                 templateUrl: 'views/options.html',
-                controller: 'optionsController'
+                controller: 'optionsController',
+                css: 'css/compics.css'
             })
             .when('/player/:id', {
                 templateUrl: 'views/player.html',
