@@ -7,11 +7,15 @@ body {
 #main-nav {
     text-transform: uppercase;
     height: 50px;
-    background-color: #1a2133;
+    background: #2E4154;
+    border-bottom: 4px solid #2E4154;
+
 }
 
 .app-btn {
-    min-width: 150px;
+    width: 20%;
+    max-width: 300px;
+    height: 50px;
 }
 
 #main-nav-list {
@@ -21,7 +25,6 @@ body {
 }
 .container-fluid {
     width: 100%;
-    background-color: #1a2133;
 }
 
 /* line 8, sass/header.scss */
@@ -38,7 +41,7 @@ body {
 
 /* line 25, sass/header.scss */
 .nav a {
-    height: 100%;
+    height: 50px;
     font-size: 1.3rem;
     width: 100%;
     text-decoration: none;

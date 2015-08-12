@@ -196,7 +196,7 @@ a:hover.btn-red, a:active.btn-red, a:focus.btn-red {
 
 /* line 20, sass/screen.scss */
 body {
-  background-color: #2c3e50;
+  background-color: #34495e;
 }
 
 /* line 24, sass/screen.scss */
@@ -288,8 +288,8 @@ div.btn-group a {
 .video-thumb {
     display: block;
     margin: auto;
-    width: 315px;
-    height: 239px;
+    width: 252px;
+    height: 191px;
 
 }
 
@@ -325,8 +325,13 @@ article {
 }
 
 
+.pagination {
+    margin: 0!important;
+}
 
-
+.search-box {
+    margin-right: 10px;
+}
 
 .btn-play {
     width: 100px;
@@ -348,5 +353,16 @@ a:hover, a:active, a:focus {
     text-shadow: 0 0 20px #fff;
 }
 
+.page-container {
+    background-color: #2E4154;
+    border-top: 4px solid #293A4B;
+    padding-top: 4px;
+}
 
+.page-container a {
+    color: #2E4154!important;
+}
 
+.page-container li.active > a{
+    color: #ffffff!important;
+}

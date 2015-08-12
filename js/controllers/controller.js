@@ -12,7 +12,7 @@ angular.module('myApp').controller("homeController",
 
 
             //TODO Change this to false in production
-            $scope.DEBUG = true;
+            $scope.DEBUG = false;
 
             $scope.$watch('viewData', function (newVal, oldVal) {
                 localData.saveData({name: "videos", data: newVal.videos});
