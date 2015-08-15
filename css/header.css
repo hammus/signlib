@@ -56,3 +56,12 @@ body {
 
 }
 
+.search-box {
+    margin-right: 10px;
+
+}
+
+.search-input {
+    max-width: 165px!important;
+    float: left;
+}

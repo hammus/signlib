@@ -60,6 +60,10 @@
 
             //var result = null;
             var result = JSON.parse($window.localStorage.getItem(name));
+            if(result.videos || result.compics) {
+                console.log("Falling back to Backup Data");
+                return global.exports.data[name];
+            }
 
             if (result !== null) {
                 //angular-local-storage returns a null object if not found.
@@ -93,7 +97,7 @@
 
 
 
-        }
+        };
 
         /**
          * @memberof LocalDataService

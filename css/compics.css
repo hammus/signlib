@@ -8,7 +8,11 @@
     background: #fefefe;
     margin: auto;
 
+
+
 }
+
+
 
 .compic-wrapper {
     width: 85%;
@@ -19,7 +23,12 @@
 
 .compic-container {
     width: 20%;
+    height: 200px;
     float: left;
+    margin: 0px 25px 25px 0px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
 
 }
 

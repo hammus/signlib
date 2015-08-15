@@ -11,8 +11,30 @@ angular.module('myApp').controller("homeController",
             $scope.pageSize = 33;
 
 
+            $scope.flat = function(categories) {
+                if(categories.length < 1)
+                {
+                    return "";
+
+                }
+
+                if(categories.length < 2)
+                {
+                    return categories[0].text;
+                }
+
+                var flat = "";
+
+                categories.forEach(function(item) {
+                    flat += item.text + ", "
+                });
+
+                return flat.substring(0, 15) + "...";
+
+            }
+
             //TODO Change this to false in production
-            $scope.DEBUG = true;
+            $scope.DEBUG = false;
 
             $scope.$watch('viewData', function (newVal, oldVal) {
                 localData.saveData({name: "videos", data: newVal.videos});
@@ -34,13 +56,25 @@ angular.module('myApp').controller("homeController",
         }])
 
     .controller("optionsController",
-    ['$scope', '$routeParams',
-        function ($scope, $routeParams) {
-            //Get the correct infor based on the url (Compic or Videos)
+    ['$scope', '$routeParams', '$window',
+        function ($scope, $routeParams, $window) {
+
+            //Show Delete Button only if we're displaying a compic | see ng-if on options.html
+            $scope.showDelete = $routeParams.type == "compics";
+
+            //Get the correct collection based on the type of object we're viewing
             $scope.viewData = $routeParams.type == "video" ? $scope.$parent.viewData.videos : $scope.$parent.viewData.compics;
+
+            //get the particular item we're viewing.
             $scope.options = $scope.viewData[$routeParams.id];
 
-            console.log($scope.options);
+
+            $scope.del = function()
+            {
+                $scope.viewData[$routeParams.id].deleted = true;
+                $window.history.back();
+
+            };
 
 
         }])

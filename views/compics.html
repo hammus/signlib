@@ -1,7 +1,7 @@
 <ng-include src="'views/header.html'"></ng-include>
 <main>
     <section class="compic-wrapper">
-        <article class="compic-container" dir-paginate="compic in viewData | filter:query | itemsPerPage: pageSize" current-page="currentPage" id="{{$index}}">
+        <article class="compic-container" dir-paginate="compic in viewData| filter:query | itemsPerPage: pageSize" current-page="currentPage" id="{{$index}}">
             <img ng-src="{{compic.folder}}" class="compic" />
             <p class="compic-title">{{compic.name}}</p>
 

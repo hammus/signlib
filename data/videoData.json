@@ -10,14 +10,26 @@
 		"thumb": "videos\\thumbs\\A-thumb.jpg",
 		"categories": [
 			{
-				"text": "cats",
-				"$$hashKey": "object:37"
+				"text": "Letters",
+				"$$hashKey": "object:107"
+			},
+			{
+				"text": "operators"
+			},
+			{
+				"text": "vocab"
+			},
+			{
+				"text": "words"
+			},
+			{
+				"text": "dictionary"
 			}
 		],
 		"tags": [
 			{
-				"text": "tags",
-				"$$hashKey": "object:39"
+				"text": "index-finger",
+				"$$hashKey": "object:109"
 			}
 		],
 		"$$hashKey": "object:4",

@@ -2,7 +2,7 @@
 <main>
 
         <section class="video-container">
-            <article class="video" dir-paginate="video in viewData | filter:query | itemsPerPage: pageSize" current-page="currentPage" id="{{viewData.indexOf(video)}}">
+            <article class="video" dir-paginate="video in viewData | filter:query | itemsPerPage: pageSize track by $index" current-page="currentPage" id="{{viewData.indexOf(video)}}">
                 <img ng-src="{{video.thumb}}" class="video-thumb" />
                 <table class="tbl-video-meta">
                     <tr>
@@ -11,7 +11,7 @@
                     </tr>
                     <tr class="tbl-tr-categories">
                         <td class="title-label">Categories:</td>
-                        <td class="video-title"><span ng-repeat="cat in video.categories">{{cat.text}}</span></td>
+                        <td class="video-title"><span>{{flat(video.categories)}}</span></td>
                     </tr>
                     <tr  class="tbl-tr-tags">
                         <td class="title-label">Tags:</td>
