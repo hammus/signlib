@@ -48,6 +48,8 @@ angular.module('myApp')
                 return;
             }
 
+
+
             dataManager.save(newVal, CONFIG.videoDataFile);
         }
 

@@ -5,14 +5,14 @@ angular.module('myApp').controller("homeController",
             $scope.headerSrc = 'views/header.html';
             $scope.viewStyle = 'css/header.css';
             $scope.localData = localData;
-            $scope.viewData = localData.startup(global.exports.data);
+            $scope.viewData = localData.startup();
 
             $scope.currentPage = 1;
             $scope.pageSize = 33;
 
 
             //TODO Change this to false in production
-            $scope.DEBUG = false;
+            $scope.DEBUG = true;
 
             $scope.$watch('viewData', function (newVal, oldVal) {
                 localData.saveData({name: "videos", data: newVal.videos});

@@ -20,9 +20,13 @@ angular.module('myApp')
         return {
             restrict: 'A',
             link: function (scope, elem, attrs) {
+
                 elem.bind('click', function () {
-                    localData.saveData({name: "videos", data: scope.viewData.videos});
-                    localData.saveData({name: "compics", data: scope.viewData.compics});
+                    var viewData = scope.$parent.$parent.viewData;
+
+                    localData.setLocalData({name: "videos", data: viewData.videos});
+                    localData.setLocalData({name: "compics", data: viewData.compics});
+                    localData.backup(viewData);
 
                     var gui = require("nw.gui");
                     gui.App.quit();
