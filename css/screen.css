@@ -81,8 +81,8 @@ main {
 
 @font-face {
     font-family: 'Lato';
-    src: url('fonts/lato-light.ttf');
-    url('lato-light.ttf') format('truetype'),
+    src: url('fonts/Lato-Light.ttf');
+    url('fonts/Lato-Light.ttf') format('truetype'),
     font-weight: lighter;
     font-style: normal;
 
