@@ -6,8 +6,6 @@ var github = new GitHubApi({
     version: "3.0.0"
 });
 
-var token = "306c1d9faa631adc6c2f792ae6e04001d573d716";
-
 var config = FileManager.config;
 var videoData, compicData;
 
